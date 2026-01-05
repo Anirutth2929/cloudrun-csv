@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def read_csv():
     bucket_name = "my_bucket_anirutth"
-    file_name = "anirutth_data.csv"
+    file_name = "anirutth_data.csv.txt"
 
     client = storage.Client()
     bucket = client.bucket(bucket_name)
@@ -25,3 +25,4 @@ def read_csv():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
+
